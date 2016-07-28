@@ -5,7 +5,7 @@
     "author": "Shaun Karran",
     "license": "ISC",
     "keywords": ["node", "js", "express", "morgan", "stylus", "pug", "nodemon"],
-    "main": "index.js",
+    "main": "server.js",
     "dependencies": {
         "express": "4.14.0",
         "morgan": "1.7.0",
@@ -21,5 +21,8 @@
         "build": "npm run clean && npm run build-css",
         "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
         "start": "node server"
+    },
+    "engines": {
+        "node": "5.9.0"
     }
 }
