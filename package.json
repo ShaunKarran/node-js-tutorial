@@ -1,0 +1,25 @@
+{
+    "name": "node-js-tutorial",
+    "version": "0.0.1",
+    "description": "A project following the tutorial found at http://www.clock.co.uk/blog/a-simple-website-in-node-js-2016-edition",
+    "author": "Shaun Karran",
+    "license": "ISC",
+    "keywords": ["node", "js", "express", "morgan", "stylus", "pug", "nodemon"],
+    "main": "index.js",
+    "dependencies": {
+        "express": "4.14.0",
+        "morgan": "1.7.0",
+        "nodemon": "1.10.0",
+        "pug": "2.0.0-beta4",
+        "stylus": "0.54.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-css": "stylus source/stylesheets/index.styl -o static/css",
+        "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+        "clean": "rm -rf static/css && mkdir -p static/css",
+        "build": "npm run clean && npm run build-css",
+        "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+        "start": "node server"
+    }
+}
